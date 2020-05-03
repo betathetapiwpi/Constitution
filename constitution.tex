@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+
+\usepackage{multicol}
+\usepackage{titlesec}
+\usepackage{enumitem}
+
+\titleclass{\article}{straight}[\section]
+\newcounter{article}
+\renewcommand{\thearticle}{\arabic{article}}
+\titleformat{\article}[hang]
+  {\normalfont\LARGE\bfseries}{Article~\thearticle:}{1em}{}
+\titlespacing*{\article} {0pt}{50pt}{10pt}  %% adjust this spacing
+\makeatletter
+\@addtoreset{section}{article}
+\makeatother
+
+\titleclass{\bylaw}{straight}[\section]
+\newcounter{bylaw}
+\renewcommand{\thebylaw}{\arabic{bylaw}}
+\titleformat{\bylaw}[hang]
+  {\normalfont\LARGE\bfseries}{Item~\thebylaw:}{1em}{}
+\titlespacing*{\bylaw} {0pt}{50pt}{10pt}  %% adjust this spacing
+\makeatletter
+\@addtoreset{section}{bylaw}
+\makeatother
+\titleformat{\part}
+  {\normalfont\Huge\bfseries}{}{0em}{} %% hide "part" and remove indent for parts
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{Section~\thesection:}{10pt}{}
+
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}{Sub-Section~\thesubsection:}{10pt}{}
+
+\title{Constitution of the WPI Chapter, the Eta Tau, of Beta Theta Pi}
+\date{May 3, 2020}
+\begin{document}
+\begin{titlepage}
+\maketitle
+\end{titlepage}
+\input{preamble}
+\clearpage
+\input{articles}
+\part{Bylaws}
+\input{code_of_conduct}
+\input{attendance_and_accountability}
+\input{meeting_specs}
+\input{voting}
+\input{elections}
+\input{new_exec_board}
+\input{kai}
+\input{recruitment}
+\input{committees}
+\input{academic_assistance}
+\input{payment}
+\input{financial_inactivity}
+\input{discipline}
+\input{housing}
+\input{risk}
+\input{recognition_ceremonies}
+\input{alumni}
+\input{finance}
+
+\input{appendix}
+\end{document}
