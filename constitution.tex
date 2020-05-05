@@ -1,47 +1,33 @@
-\documentclass[12pt]{article}
+\documentclass[10pt]{report}
+\usepackage[utf8]{inputenc}
 
-\usepackage{multicol}
-\usepackage{titlesec}
-\usepackage{enumitem}
-
-\titleclass{\article}{straight}[\section]
-\newcounter{article}
-\renewcommand{\thearticle}{\arabic{article}}
-\titleformat{\article}[hang]
-  {\normalfont\LARGE\bfseries}{Article~\thearticle:}{1em}{}
-\titlespacing*{\article} {0pt}{50pt}{10pt}  %% adjust this spacing
-\makeatletter
-\@addtoreset{section}{article}
-\makeatother
-
-\titleclass{\bylaw}{straight}[\section]
-\newcounter{bylaw}
-\renewcommand{\thebylaw}{\arabic{bylaw}}
-\titleformat{\bylaw}[hang]
-  {\normalfont\LARGE\bfseries}{Item~\thebylaw:}{1em}{}
-\titlespacing*{\bylaw} {0pt}{50pt}{10pt}  %% adjust this spacing
-\makeatletter
-\@addtoreset{section}{bylaw}
-\makeatother
-\titleformat{\part}
-  {\normalfont\Huge\bfseries}{}{0em}{} %% hide "part" and remove indent for parts
-
-\titleformat{\section}
-  {\normalfont\Large\bfseries}{Section~\thesection:}{10pt}{}
-
-\renewcommand{\thesubsection}{\arabic{subsection}}
-\titleformat{\subsection}
-  {\normalfont\large\bfseries}{Sub-Section~\thesubsection:}{10pt}{}
-
-\title{Constitution of the WPI Chapter, the Eta Tau, of Beta Theta Pi}
+\title{Constitution and Bylaws}
+\author{WPI Chapter, the Eta Tau, of Beta Theta Pi}
 \date{May 3, 2020}
+
 \begin{document}
+\input{revision}
+
 \begin{titlepage}
 \maketitle
 \end{titlepage}
+
+\begin{center}
+	\small This document was compiled on \today, from Git revision \Revision.
+\end{center}
+\clearpage
+
 \input{preamble}
 \clearpage
+
+\tableofcontents
+\clearpage
+
+\renewcommand\chaptername{Article}
 \input{articles}
+
+\setcounter{chapter}{0}
+\renewcommand\chaptername{Item}
 \part{Bylaws}
 \input{code_of_conduct}
 \input{attendance_and_accountability}
@@ -62,5 +48,7 @@
 \input{alumni}
 \input{finance}
 
+\appendix
 \input{appendix}
+
 \end{document}
