@@ -1,7 +1,15 @@
-\documentclass[10pt]{report}
+\documentclass[12pt]{report}
 \usepackage[utf8]{inputenc}
+\usepackage{titlepic}
+\usepackage{graphicx}
+\usepackage[pdftex,bookmarks, bookmarksnumbered=true, 
+hypertexnames=false]{hyperref}
+\usepackage{bookmark}
 
-\title{Constitution and Bylaws}
+\title{%
+    \includegraphics[width=\textwidth]{btp_tone.jpg}\\[1cm]
+    Constitution and Bylaws
+}
 \author{WPI Chapter, the Eta Tau, of Beta Theta Pi}
 \date{May 3, 2020}
 
@@ -11,7 +19,7 @@
 \begin{titlepage}
 \maketitle
 \end{titlepage}
-
+\stepcounter{page}
 \begin{center}
 	\small This document was compiled on \today, from Git revision \Revision.
 \end{center}
@@ -19,7 +27,7 @@
 
 \input{preamble}
 \clearpage
-
+\setcounter{tocdepth}{1}
 \tableofcontents
 \clearpage
 
@@ -37,6 +45,7 @@
 \input{new_exec_board}
 \input{kai}
 \input{recruitment}
+\input{new_mem_process}
 \input{committees}
 \input{academic_assistance}
 \input{payment}
@@ -48,6 +57,7 @@
 \input{alumni}
 \input{finance}
 
+\part{Appendices}
 \appendix
 \input{appendix}
 
