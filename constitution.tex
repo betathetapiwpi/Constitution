@@ -2,19 +2,20 @@
 \usepackage[utf8]{inputenc}
 \usepackage{titlepic}
 \usepackage{graphicx}
+\usepackage[inline]{enumitem}
 \usepackage[pdftex,bookmarks, bookmarksnumbered=true, 
 hypertexnames=false]{hyperref}
 \usepackage{bookmark}
 
 \title{%
-    \includegraphics[width=\textwidth]{btp_tone.jpg}\\[1cm]
+    \includegraphics[width=\textwidth]{figures/btp_tone.jpg}\\[1cm]
     Constitution and Bylaws
 }
 \author{WPI Chapter, the Eta Tau, of Beta Theta Pi}
 \date{May 3, 2020}
 
 \begin{document}
-\input{revision}
+\include{revision}
 
 \begin{titlepage}
 \maketitle
@@ -25,40 +26,50 @@ hypertexnames=false]{hyperref}
 \end{center}
 \clearpage
 
-\input{preamble}
+\include{preamble}
 \clearpage
 \setcounter{tocdepth}{1}
 \tableofcontents
 \clearpage
 
 \renewcommand\chaptername{Article}
-\input{articles}
+\part{Articles}
+\include{articles/chapter_summary}
+\include{articles/membership_quals}
+\include{articles/meetings}
+\include{articles/chapter_organization}
+\include{articles/financial_operations}
+\include{articles/risk_management}
+\include{articles/ceremonies}
+\include{articles/changes}
 
 \setcounter{chapter}{0}
 \renewcommand\chaptername{Item}
 \part{Bylaws}
-\input{code_of_conduct}
-\input{attendance_and_accountability}
-\input{meeting_specs}
-\input{voting}
-\input{elections}
-\input{new_exec_board}
-\input{kai}
-\input{recruitment}
-\input{new_mem_process}
-\input{committees}
-\input{academic_assistance}
-\input{payment}
-\input{financial_inactivity}
-\input{discipline}
-\input{housing}
-\input{risk}
-\input{recognition_ceremonies}
-\input{alumni}
-\input{finance}
+\include{bylaws/code_of_conduct}
+\include{bylaws/attendance_and_accountability}
+\include{bylaws/meeting_specs}
+\include{bylaws/voting}
+\include{bylaws/elections}
+\include{bylaws/new_exec_board}
+\include{bylaws/kai}
+\include{bylaws/recruitment}
+\include{bylaws/new_mem_process}
+\include{bylaws/committees}
+\include{bylaws/academic_assistance}
+\include{bylaws/payment}
+\include{bylaws/financial_inactivity}
+\include{bylaws/discipline}
+\include{bylaws/housing}
+\include{bylaws/risk}
+\include{bylaws/recognition_ceremonies}
+\include{bylaws/alumni}
+\include{bylaws/finance}
 
 \part{Appendices}
 \appendix
-\input{appendix}
-
+\include{appendices/definitions}
+\include{appendices/duties_of_exec}
+\include{appendices/duties_of_officers}
+\include{appendices/duties_of_kai}
 \end{document}
